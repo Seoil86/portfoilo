@@ -364,6 +364,9 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 .screen2 img {position: absolute; transition: 1s;}
 .screen2 img:nth-child(2) {z-index: -1;}
 
+.screen3 img {position: absolute; transition: 1s; transform: scale(0.5); opacity: 0;}
+
+
 
 
 .container .screen0 {

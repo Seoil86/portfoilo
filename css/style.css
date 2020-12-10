@@ -39,6 +39,7 @@ html, body {font-family: a시네마;}
   font-weight: bold;
   background: #111;
   line-height: 2;
+  border: 3px solid #fff;
   border-radius: 20px;
   margin-top: 20px;
   font-family: sans-serif;
@@ -381,7 +382,18 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 .screen4 .right-cont {width: 50%; height: 100%; float: right;}
 .screen4 .right-cont > ul {width: 90%; height: 90%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .screen4 .right-cont > ul > li > span {font-size: 2rem; font-weight: bold;}
-
+.screen4 .right-cont > ul > li > .info3 {height: 100%;}
+.screen4 .right-cont > ul > li > .info3 > li {margin: 10% 0;}
+.screen4 .right-cont > ul > li > .info3-1 {width: 50%; height: 100%;}
+.screen4 .right-cont > ul > li > .info3-2 {width: 50%; height: 100%; left: 50%;}
+.screen4 .right-cont > ul > li > ul > li > .fa-star {color: yellow; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
+.screen4 .cont {width: 100%; height: 100%; position: absolute; background: #111; transition: 1s;}
+.screen4 .cont > div {position: absolute;}
+.screen4 .movie-screen {width: 100%; height: 100%;}
+.screen4 .movie-screen .cont-text {position: absolute;}
+.screen4 .movie-screen .cont-text > li {font-size: 2rem; margin: 1.5%; color: #fff;}
+.screen4 .subtitle {width: 100%; height: 20%; bottom: 10%;}
+.screen4 .subtitle > ul {position: absolute; color: #fff; text-align: center; font-size: 2rem; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
 
 
 

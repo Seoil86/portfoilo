@@ -271,7 +271,7 @@ html, body {font-family: a시네마;}
     position: absolute;
 }
 .film ul li .movie:hover {
-    transform: scale(1.5);
+    transform: scale(1.35);
 }
 
 

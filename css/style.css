@@ -262,16 +262,23 @@ html, body {font-family: a시네마;}
 .film ul li {width: 100%;}
 
 @keyframes slide {
-    0% {margin-top: 0;}
+    10% {margin-top: 0;}
     50% {margin-top: -1200px;}
     100% {margin-top: 0;}
 }
 
 .film ul li img {
     position: absolute;
+    transition: .5s;
+}
+.film ul li .movie {
+  -webkit-filter: grayscale(100%);
+  filter: gray;
 }
 .film ul li .movie:hover {
     transform: scale(1.35);
+    -webkit-filter: grayscale(0%);
+    filter: none;
 }
 
 

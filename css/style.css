@@ -383,10 +383,10 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 .screen4 .info > li {margin: 5% 0;}
 .screen4 .info > li > span {font-size: 1.5rem;}
 .screen4 .info > li > ul > li {margin: 5% 0;}
-.screen4 .info > li > ul > li > span {font-size: 1.5rem;}
-.screen4 .left-cont {width: 50%; height: 100%; float: left; text-align: center;}
-.screen4 .left-cont > img {width: 90%; height: 90%; position: relative; top: 50%; transform: translateY(-50%);}
-.screen4 .right-cont {width: 50%; height: 100%; float: right;}
+.screen4 .left-cont {width: 50%; height: 100%; position: relative; float: left;}
+.screen4 .left-cont .left-img {width: 100%; height: 90%; position: relative; top: 50%; transform: translateY(-50%);}
+.screen4 .left-cont img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.screen4 .right-cont {width: 50%; height: 100%; float: right; font-size: 1.2rem;}
 .screen4 .right-cont > ul {width: 90%; height: 90%; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
 .screen4 .right-cont > ul > li > span {font-size: 2rem; font-weight: bold;}
 .screen4 .right-cont > ul > li > .info3 {height: 100%;}
@@ -404,7 +404,7 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 
 .screen-cont .cont-txt {margin: 1%; padding: 1% 1% 0 1%; position: absolute; background: #fff; right: 0; bottom:0; z-index: 15000; font-size: 1.2rem; border: 3px solid #111; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li:nth-child(3) {text-align: center;}
-.screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 3rem; padding: 3%; border-radius: 20px;}
+.screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 3rem; padding: 2.5%; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li > a:hover {border: 3px solid #111; background: #fff; color: #111;}
 
 

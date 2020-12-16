@@ -28,7 +28,7 @@ html, body {font-family: a시네마;}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  top: 70%;
+  top: 65%;
   left: 50%;
   transform: translateX(-50%);
   height: 20%;
@@ -48,7 +48,6 @@ html, body {font-family: a시네마;}
   color: #fff;
   animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
 }
-.mouse2 {display: none;}
 .mouse .scroll {
   background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #fff 50%, #fff 100%);
   position: relative;
@@ -340,6 +339,11 @@ body {
     height: 50000px;
 }
   
+.player {
+    width: 100vw;
+    height: 100vh;
+}
+  
 #film2 {
     display: none;
 }
@@ -349,7 +353,6 @@ body {
 
 header {width: 1620px; height: 100vh; overflow: hidden; position: fixed;}
 header .bg {width: 100%; height: 100%; float: left; position: fixed; overflow: hidden;}
-header .bg .bgi1 {display: none;}
 
  .title1 {width: 100%; height: 100vh; float: left; position: fixed; z-index: 1100; transition: 1s;}
  .title1 > ul {float: left; width: 100%; height: 100%; text-align: center; }
@@ -364,7 +367,7 @@ header .bg .bgi1 {display: none;}
  header > .title2 > ul > li:nth-child(3) {margin-right: 5%;}
  header .bg {z-index: -1;}
 
-.player {width: 50vw; height: 50vh; position: absolute; left: -7%; bottom: 1%; z-index: 100; position: fixed;}
+.player {width: 50vw; height: 50vh; position: absolute; left: -7%; bottom: 3%; z-index: 100; position: fixed;}
 
 header .container {width: 960px; height: 540px; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%); overflow: hidden;}
 
@@ -402,7 +405,7 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 .screen-cont .cont-txt {margin: 1%; padding: 1% 1% 0 1%; position: absolute; background: #fff; right: 0; bottom:0; z-index: 15000; font-size: 1.2rem; border: 3px solid #111; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li:nth-child(3) {text-align: center;}
 .screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 3rem; padding: 2.5%; border-radius: 20px;}
-.screen-cont .cont-txt > ul > li > a:hover {background: red; color: #fff;}
+.screen-cont .cont-txt > ul > li > a:hover {border: 3px solid #111; background: #fff; color: #111;}
 
 
 .container .screen0 {width: 100%; height: 100%; position: absolute;}
@@ -750,29 +753,8 @@ header .container {width: 960px; height: 540px; margin: 0 auto; position: relati
 
 
 
-  @media (max-width: 1280px){
-    header {width: 980px;}
-    header > .title2 {width: 980px;}
-    header > .title2 > ul > li img {height: 50%;}
-    header .bg {width: 76.5625%; height: 100vh;}
-    header .bg .bgi {display: none;}
-    header .bg .bgi1 {display: block; position: relative; top: 150px;}
-    header .container {width: 640px; height: 360px;}
-
-    .player {width: 40vw; height: 40vh; left: -3%; bottom: 3%;}
-
-    .mouse {top: 68%;}
-
-    .screen3 p {font-size: 4rem;}
-
-    .screen4 .right-cont > ul > li > span {font-size: 1.5rem;}
-    .screen4 .info > li > span {font-size: 1.2rem;}
-    .screen4 .right-cont {font-size: 0.9rem;}
-    .screen4 .info > li {margin: 4% 0;}
-    .screen4 .movie-screen .cont-text > li {font-size: 1.5rem; margin: 1%;}
-    .screen4 .subtitle > ul {font-size: 1.5rem;}
-
-
+  @media (max-width: 1200px){
+    
   }
 
 

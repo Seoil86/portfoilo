@@ -257,7 +257,7 @@ html, body {font-family: a시네마; width: 100%; height: 100vh;}
 
 .film {width: 300px; height: 100vh; overflow: hidden; position: fixed; right: 0;}
 .film ul {width: 100%;
-    animation: slide 20s linear infinite;
+    animation: slide 15s linear infinite;
 }
 
 .film ul li {width: 100%;}
@@ -285,7 +285,7 @@ html, body {font-family: a시네마; width: 100%; height: 100vh;}
 
 .film ul li .movie {
     left: 38px;
-    animation: slide 20s linear infinite;
+    animation: slide 15s linear infinite;
 }
 .film ul li .scene1 {
     top: 12px;

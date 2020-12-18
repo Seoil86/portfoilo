@@ -9,18 +9,23 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- 마우스 스크롤 다운 안내 -->
     <div class="mouse" data-0="left:50%;" data-2300="left:50%;" data-2400="left:71%;">
       <div class="scroll"></div>
       <p>Scroll</p>
     </div>
     
 
-    </div>
+
+    <!-- 영화관 커튼 이미지 -->
     <div class="curtain" data-0="display:block;" data-2500="display:none;">
       <img src="images/curtain-left.jpg" alt="커튼이미지" class="curtain-left" data-0="left:0;" data-2000="left:-100%;">
       <img src="images/curtain-right.jpg" alt="커튼이미지" class="curtain-right" data-0="right:0;" data-2000="right:-100%;">
     </div>
 
+
+
+    <!-- 메인 BOX PORTFOLIO 타이틀 이미지 -->
     <div class="title1" data-0="transform:scale(2);" data-1800="transform:scale(1);" data-1900="transform:scale(0);">
       <ul>
           <li data-0="left:-100%; top:-300%;" data-1500="left:0; top:0;"><img src="images/b.png" alt="타이틀이미지" data-0="transform:rotate(0deg);" data-1500="transform:rotate(1800deg);"></li>
@@ -39,7 +44,10 @@
       </ul>
   </div>
 
+
+
     <header>
+        <!-- 상단 BOX PORTFOLIO 타이틀 이미지 -->
         <div class="title2">
             <ul>
                 <li><img src="images/b.png" alt="타이틀이미지"></li>
@@ -58,11 +66,13 @@
             </ul>
         </div>
 
+        <!-- 영화관 배경 이미지 -->
         <div class="bg">
             <img src="images/bgi.png" alt="배경이미지" class="bgi">
             <img src="images/bgi1-1.png" alt="배경이미지" class="bgi1">
         </div>
 
+        <!-- 좌측 필름이미지 슬라이드 -->
         <div class="film">
             <ul class="film-slide">
                 <li class="scene">
@@ -88,6 +98,7 @@
 
         <div class="container" data-0="display:none;" data-2000="display:block;">
 
+          <!-- 카운드다운 이미지 -->
           <div class="screen0" data-0="display:block;" data-3500="opacity:1;" data-4000="opacity:0;">
             <div class="screen1">
               <div class="screen"></div>
@@ -96,6 +107,7 @@
             </div>
           </div>
 
+          <!-- MGM 트레이드마크 패러디 이미지 -->
           <div class="screen0" data-4000="opacity:0;" data-4500="opacity:1;" data-6000="opacity:1;" data-6500="opacity:0;">
             <div class="screen2">
               <img src="images/trade-mark.png" alt="트레이드마크" width="100%;">
@@ -103,6 +115,7 @@
             </div>
           </div>
 
+          <!-- 나의 성장과정 HISTORY 이미지 -->
           <div class="screen0" data-6500="opacity:0;" data-7000="opacity:1;" data-30500="opacity:1;" data-31000="opacity:0;">
             <div class="screen3">
               <img src="images/history15.png" alt="히스토리이미지" data-22000="opacity:1;" data-22800="transform:scale(0.8); top:0; left:0; opacity:1;" data-23000="transform:scale(2); top:0; left:0; opacity:0;" width="100%;">
@@ -124,6 +137,7 @@
             </div>
           </div>
 
+          <!-- 영화관 스크린에 보여지는 컨텐츠 -->
           <div class="screen0" data-26000="opacity:0;" data-26500="opacity:1;" data-50000="opacity:1;" data-50500="opacity:0;">
             <div class="screen4">
 
@@ -235,6 +249,9 @@
             </div>
           </div>
 
+
+
+          <!-- 영화관 스크린으로 보여지는 포트폴리오 자료 -->
           <div class="screen0 screen-cont" data-41000="opacity:0;" data-41500="opacity:1;" data-44500="opacity:1;" data-45000="opacity:0;">
 
             <div class="screen-cont1">
@@ -404,8 +421,6 @@
 
           
 
-          
-
           <!-- <div class="screen0" data-19000="opacity:0;" data-19500="opacity:1;" data-21000="opacity:1;" data-21500="opacity:0;">
             <div class="screen6">
               <img src="images/응답하라.jpg" alt="">
@@ -424,8 +439,7 @@
             </div>
           </div> -->
 
-          
-
+          <!-- 영화 스크린 이펙트 필터 -->
           <div class='scratch--outer'>
             <div class="scratch--inner">
               <div class="background grain"></div>
@@ -436,6 +450,7 @@
 
     </header>
 
+    <!-- 좌측 카메라(프로젝터) SVG 이미지 -->
     <div class="camera">
         <svg class="player" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 438.1 283">
             <defs>
@@ -1007,10 +1022,11 @@
     <script src="js/script.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
   
+
+    <!-- 좌측 카메라(프로젝터) 모션 스크립트 -->
     <script id="rendered-js" >
         TweenMax.set('#lightcirc', {
         visibility: "visible" });
-
 
         function sceneOne() {
         var tl = new TimelineMax();

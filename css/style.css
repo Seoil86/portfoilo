@@ -85,7 +85,8 @@ body {margin: 0; padding: 0; height: 50000px;}
 .film ul li {width: 100%;}
 @keyframes slide {
   10% {margin-top: 0;}
-  50% {margin-top: -1200px;}
+  50% {margin-top: -1280px;}
+  60% {margin-top: -1280px;}
   100% {margin-top: 0;}
 }
 .film ul li img {position: absolute; transition: .5s;}

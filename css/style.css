@@ -1,362 +1,138 @@
-* {margin: 0; padding: 0;	box-sizing: border-box;}
-h1, h2, h3, h4, h5, h6, ul, ol, li, span, a, p, div, img {margin: 0; padding: 0;	box-sizing: border-box;}
-ul, ol, li {list-style: none;}
-a {text-decoration: none;}
-header, nav, section, article, aside, footer {display: block;}
-.clearfix:after {content: ""; display: block; clear: both;}
+/* 폰트 영역 */
+@font-face {font-family: 'Roboto'; src: url(../font/Roboto-Medium.ttf) format('truetype');}
+@font-face {font-family: 'a시네마'; src: url(../font/a시네마B.ttf) format('truetype');}
 
-@font-face {
-    font-family: 'Roboto';
-    src: url(../font/Roboto-Medium.ttf) format('truetype');
-}
 
-@font-face {
-  font-family: 'a시네마';
-  src: url(../font/a시네마B.ttf) format('truetype');
-}
 
+/* 공통 영역 */
 html, body {font-family: a시네마; width: 100%; height: 100vh;}
+body {margin: 0; padding: 0; height: 50000px;}
 
 
 
-
-
-.mouse {
-  position: fixed;
-  z-index: 10000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 20%;
-  transition: 1s;
-}
-.mouse p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  background: #111;
-  line-height: 2;
-  border: 3px solid #fff;
-  border-radius: 20px;
-  margin-top: 20px;
-  font-family: sans-serif;
-  letter-spacing: 12px;
-  text-indent: 12px;
-  color: #fff;
-  animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;
-}
+/* 마우스 스크롤 안내 아이콘 영역 */
+.mouse {position: fixed; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; top: 70%; left: 50%; transform: translateX(-50%); height: 20%; transition: 1s;}
+.mouse p {font-size: 1.2rem; font-weight: bold; background: #111; line-height: 2; border: 3px solid #fff; border-radius: 20px; margin-top: 20px; font-family: sans-serif; letter-spacing: 12px; text-indent: 12px; color: #fff; animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;}
 .mouse2 {display: none;}
-.mouse .scroll {
-  background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #fff 50%, #fff 100%);
-  position: relative;
-  width: 52px;
-  height: 88px;
-  border-radius: 100px;
-  background-size: 100% 200%;
-  animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;
-}
-.mouse .scroll:before, .mouse .scroll:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
-.mouse .scroll:before {
-  width: 46px;
-  height: 82px;
-  background-color: #111;
-  border-radius: 100px;
-}
-.mouse .scroll:after {
-  background-color: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  animation: trackBallSlide 5s linear infinite;
-}
+.mouse .scroll {background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #fff 50%, #fff 100%); position: relative; width: 52px; height: 88px; border-radius: 100px; background-size: 100% 200%; animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;}
+.mouse .scroll:before, .mouse .scroll:after {content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; margin: auto;}
+.mouse .scroll:before {width: 46px; height: 82px; background-color: #111; border-radius: 100px;}
+.mouse .scroll:after {background-color: #fff; width: 10px; height: 10px; border-radius: 100%; animation: trackBallSlide 5s linear infinite;}
 @keyframes colorSlide {
-  0% {
-    background-position: 0% 100%;
-  }
-  20% {
-    background-position: 0% 0%;
-  }
-  21% {
-    background-color: #4e5559;
-  }
-  29.99% {
-    background-color: #fff;
-    background-position: 0% 0%;
-  }
-  30% {
-    background-color: #4e5559;
-    background-position: 0% 100%;
-  }
-  50% {
-    background-position: 0% 0%;
-  }
-  51% {
-    background-color: #4e5559;
-  }
-  59% {
-    background-color: #fff;
-    background-position: 0% 0%;
-  }
-  60% {
-    background-color: #4e5559;
-    background-position: 0% 100%;
-  }
-  80% {
-    background-position: 0% 0%;
-  }
-  81% {
-    background-color: #4e5559;
-  }
-  90%, 100% {
-    background-color: #fff;
-  }
+  0% {background-position: 0% 100%;}
+  20% {background-position: 0% 0%;}
+  21% {background-color: #4e5559;}
+  29.99% {background-color: #fff; background-position: 0% 0%;}
+  30% {background-color: #4e5559; background-position: 0% 100%;}
+  50% {background-position: 0% 0%;}
+  51% {background-color: #4e5559;}
+  59% {background-color: #fff; background-position: 0% 0%;}
+  60% {background-color: #4e5559; background-position: 0% 100%;}
+  80% {background-position: 0% 0%;}
+  81% {background-color: #4e5559;}
+  90%, 100% {background-color: #fff;}
 }
 @keyframes trackBallSlide {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  6% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  14% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  15%, 19% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  28%, 29.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  36% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  44% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  45%, 49% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  58%, 59.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  66% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  74% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  75%, 79% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  88%, 100% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
+  0% {opacity: 1; transform: scale(1) translateY(-20px);}
+  6% {opacity: 1; transform: scale(0.9) translateY(5px);}
+  14% {opacity: 0; transform: scale(0.4) translateY(40px);}
+  15%, 19% {opacity: 0; transform: scale(0.4) translateY(-20px);}
+  28%, 29.99% {opacity: 1; transform: scale(1) translateY(-20px);}
+  30% {opacity: 1; transform: scale(1) translateY(-20px);}
+  36% {opacity: 1; transform: scale(0.9) translateY(5px);}
+  44% {opacity: 0; transform: scale(0.4) translateY(40px);}
+  45%, 49% {opacity: 0; transform: scale(0.4) translateY(-20px);}
+  58%, 59.99% {opacity: 1; transform: scale(1) translateY(-20px);}
+  60% {opacity: 1; transform: scale(1) translateY(-20px);}
+  66% {opacity: 1; transform: scale(0.9) translateY(5px);}
+  74% {opacity: 0; transform: scale(0.4) translateY(40px);}
+  75%, 79% {opacity: 0; transform: scale(0.4) translateY(-20px);}
+  88%, 100% {opacity: 1; transform: scale(1) translateY(-20px);}
 }
 @keyframes nudgeMouse {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(8px);
-  }
-  30% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(8px);
-  }
-  90% {
-    transform: translateY(0);
-  }
+  0% {transform: translateY(0);}
+  20% {transform: translateY(8px);}
+  30% {transform: translateY(0);}
+  50% {transform: translateY(8px);}
+  60% {transform: translateY(0);}
+  80% {transform: translateY(8px);}
+  90% {transform: translateY(0);}
 }
 @keyframes nudgeText {
-  0% {
-    transform: translateY(0);
-  }
-  20% {
-    transform: translateY(2px);
-  }
-  30% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(2px);
-  }
-  60% {
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(2px);
-  }
-  90% {
-    transform: translateY(0);
-  }
+  0% {transform: translateY(0);}
+  20% {transform: translateY(2px);}
+  30% {transform: translateY(0);}
+  50% {transform: translateY(2px);}
+  60% {transform: translateY(0);}
+  80% {transform: translateY(2px);}
+  90% {transform: translateY(0);}
 }
 @keyframes colorText {
-  21% {
-    color: #4e5559;
-  }
-  30% {
-    color: #fff;
-  }
-  51% {
-    color: #4e5559;
-  }
-  60% {
-    color: #fff;
-  }
-  81% {
-    color: #4e5559;
-  }
-  90% {
-    color: #fff;
-  }
+  21% {color: #4e5559;}
+  30% {color: #fff;}
+  51% {color: #4e5559;}
+  60% {color: #fff;}
+  81% {color: #4e5559;}
+  90% {color: #fff;}
 }
 
 
 
 
-
+/* 필름 이미지 슬라이드 영역 */
 .film {width: 300px; height: 100vh; overflow: hidden; position: fixed; right: 0;}
-.film ul {width: 100%;
-    animation: slide 15s linear infinite;
-}
-
+.film ul {width: 100%; animation: slide 15s linear infinite;}
 .film ul li {width: 100%;}
-
 @keyframes slide {
-    10% {margin-top: 0;}
-    50% {margin-top: -1200px;}
-    100% {margin-top: 0;}
+  10% {margin-top: 0;}
+  50% {margin-top: -1200px;}
+  100% {margin-top: 0;}
 }
-
-.film ul li img {
-    position: absolute;
-    transition: .5s;
-}
-.film ul li .movie {
-  -webkit-filter: grayscale(100%);
-  filter: gray;
-}
-.film ul li .movie:hover {
-    transform: scale(1.35);
-    -webkit-filter: grayscale(0%);
-    filter: none;
-}
-
-
-.film ul li .movie {
-    left: 38px;
-    animation: slide 15s linear infinite;
-}
-.film ul li .scene1 {
-    top: 12px;
-}
-.film ul li .scene2 {
-    top: 162px;
-}
-.film ul li .scene3 {
-    top: 312px;
-}
-.film ul li .scene4 {
-    top: 462px;
-}
-.film ul li .scene5 {
-    top: 612px;
-}
-.film ul li .scene6 {
-    top: 762px;
-}
-.film ul li .scene7 {
-    top: 912px;
-}
-.film ul li .scene8 {
-    top: 1062px;
-}
-.film ul li .scene9 {
-    top: 1212px;
-}
-.film ul li .scene10 {
-    top: 1362px;
-}
-.film ul li .scene11 {
-    top: 1512px;
-}
-.film ul li .scene12 {
-    top: 1662px;
-}
-.film ul li .scene13 {
-    top: 1812px;
-}
-.film ul li .scene14 {
-    top: 1962px;
-}
-.film ul li .scene15 {
-    top: 2112px;
-}
+.film ul li img {position: absolute; transition: .5s;}
+.film ul li .movie {-webkit-filter: grayscale(100%); filter: gray;}
+.film ul li .movie:hover {transform: scale(1.35); -webkit-filter: grayscale(0%); filter: none;}
+.film ul li .movie {left: 38px; animation: slide 15s linear infinite;}
+.film ul li .scene1 {top: 12px;}
+.film ul li .scene2 {top: 162px;}
+.film ul li .scene3 {top: 312px;}
+.film ul li .scene4 {top: 462px;}
+.film ul li .scene5 {top: 612px;}
+.film ul li .scene6 {top: 762px;}
+.film ul li .scene7 {top: 912px;}
+.film ul li .scene8 {top: 1062px;}
+.film ul li .scene9 {top: 1212px;}
+.film ul li .scene10 {top: 1362px;}
+.film ul li .scene11 {top: 1512px;}
+.film ul li .scene12 {top: 1662px;}
+.film ul li .scene13 {top: 1812px;}
+.film ul li .scene14 {top: 1962px;}
+.film ul li .scene15 {top: 2112px;}
 
 
-body {
-    margin: 0;
-    padding: 0;
-    height: 50000px;
-}
-  
-#film2 {
-    display: none;
-}
 
+/* 커튼 이미지 영역 */
 .curtain {width: 100%; height: 100vh; position: fixed; z-index: 1000;}
 .curtain img {position: absolute; transition: 5s;}
 
+
+
+/* 영화관 배경 이미지 영역 */
 header {width: 1620px; height: 100vh; overflow: hidden; position: fixed;}
 header .bg {width: 100%; height: 100vh; float: left; position: fixed; overflow: hidden;}
 header .bg .bgi1 {display: none;}
 
+
+
+/* 메인 타이틀 영역 */
  .title1 {width: 100%; height: 100vh; float: left; position: fixed; z-index: 1100; transition: 1s;}
  .title1 > ul {float: left; width: 100%; height: 100%; text-align: center; }
  .title1 > ul > li {display: inline; position: relative;}
  .title1 > ul > li img {position: relative; top: 50%; transform: translateY(-50%);}
  .title1 > ul > li:nth-child(3) {margin-right: 5%;}
 
+
+
+ /* 세브 타이틀 영역 */
  header > .title2 {width: 85.2%; height: 15.47987616099071%; float: left; position: fixed; transition: 1s;}
  header > .title2 > ul {float: left; width: 100%; height: 100%; text-align: center; background: #111;}
  header > .title2 > ul > li {display: inline; position: relative;}
@@ -364,18 +140,22 @@ header .bg .bgi1 {display: none;}
  header > .title2 > ul > li:nth-child(3) {margin-right: 5%;}
  header .bg {z-index: -1;}
 
-.player {width: 50vw; height: 50vh; position: absolute; left: -7%; bottom: 1%; z-index: 100; position: fixed;}
 
+
+/* 카메라(프로젝터) 영역 */
+.player {width: 50vw; height: 50vh; position: absolute; left: -7%; bottom: 1%; z-index: 100; position: fixed;}
+#film2 {display: none;}
+
+
+
+/* 영화 스크린 영역 */
 header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%); overflow: hidden;}
 .screen0 {width: 100%; height: 100%; position: absolute;}
 .screen0 > div, ul {width: 100%; height: 100%;}
-
 .screen2 img {position: absolute; transition: 1s;}
 .screen2 img:nth-child(2) {z-index: -1;}
-
 .screen3 p {width: 100%; font-size: 5rem; text-align: center; position: absolute; top: 50%; transform: translateY(-50%); transition: 1s;}
 .screen3 img {position: absolute; transition: 2s; opacity: 0;}
-
 .screen4 .info {position: absolute; width: 100%; height: 100vh; opacity: 0;}
 .screen4 .info > li {margin: 5% 0;}
 .screen4 .info > li > span {font-size: 1.5rem;}
@@ -398,131 +178,38 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 .screen4 .movie-screen .cont-text > li {font-size: 2rem; margin: 1.5%; color: #fff;}
 .screen4 .subtitle {width: 100%; height: 20%; bottom: 10%;}
 .screen4 .subtitle > ul {position: absolute; color: #fff; text-align: center; font-size: 2rem; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
-
 .screen-cont .cont-txt {margin: 1%; padding: 1% 1% 0 1%; position: absolute; background: #fff; right: 0; bottom:0; z-index: 15000; font-size: 1.2rem; border: 3px solid #111; border-radius: 20px;}
+.screen-cont .cont-txt > ul > li {margin: 2% 0;}
 .screen-cont .cont-txt > ul > li:nth-child(3) {text-align: center;}
 .screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 3rem; padding: 2.5%; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li > a:hover {background: red; color: #fff;}
+.screen-cont p {position: absolute; width: 100%; text-align: center; font-size: 1.5rem; padding: 1%; background: #111; color: #fff;}
 
 
 
-.screen1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    font-family: "Roboto", sans-serif;
-    overflow: hidden;
-    box-shadow: inset 0 0 5em 1em #000;
-    background: #4f4f4f;
-  }
-  
-  .lines::before {
-    content: "";
-    top: 50%;
-    transform: translatey(-50%);
-    left: 0;
-    height: 8px;
-    background: #000;
-    width: 100%;
-    position: absolute;
-  }
-  
-  .lines::after {
-    content: "";
-    top: 0;
-    left: 25%;
-    transform: translatex(-50%);
-    width: 8px;
-    background: #000;
-    height: 100vh;
-    position: absolute;
-  }
-  
-  .screen {
-    clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-    background: #e1e1e1;
-    position: absolute;
-    height: calc(100vh + 100vw);
-    width: calc(100vh + 100vw);
-    animation: spin 1s linear infinite;
-  }
-  
+/* 스크린 카운트다운 영역 */
+.screen1 {display: flex; justify-content: center; align-items: center; height: 100%; font-family: "Roboto", sans-serif; overflow: hidden; box-shadow: inset 0 0 5em 1em #000; background: #4f4f4f;}
+  .lines::before {content: ""; top: 50%; transform: translatey(-50%); left: 0; height: 8px; background: #000; width: 100%; position: absolute;}
+  .lines::after {content: ""; top: 0; left: 25%; transform: translatex(-50%); width: 8px; background: #000; height: 100vh; position: absolute;}
+  .screen {clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0); background: #e1e1e1; position: absolute; height: calc(100vh + 100vw); width: calc(100vh + 100vw); animation: spin 1s linear infinite;}
   @keyframes spin {
-    0% {
-      clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-    }
-    12.5% {
-      clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);
-    }
-    37.5% {
-      clip-path: polygon(
-        50% 50%,
-        100% 100%,
-        100% 100%,
-        100% 100%,
-        0 100%,
-        0 0,
-        50% 0
-      );
-    }
-    62.5% {
-      clip-path: polygon(50% 50%, 0 100%, 0 100%, 0 100%, 0 100%, 0 0, 50% 0);
-    }
-    87.5% {
-      clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0, 50% 0);
-    }
-    100% {
-      clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0);
-    }
+    0% {clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);}
+    12.5% {clip-path: polygon(50% 50%, 100% 0, 100% 0, 100% 100%, 0 100%, 0 0, 50% 0);}
+    37.5% {clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 0 100%, 0 0, 50% 0);}
+    62.5% {clip-path: polygon(50% 50%, 0 100%, 0 100%, 0 100%, 0 100%, 0 0, 50% 0);}
+    87.5% {clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0, 50% 0);}
+    100% {clip-path: polygon(50% 50%, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0, 50% 0);}
   }
-  
-  .lines {
-    box-shadow: inset 0 0 5em 1em #000;
-    position: absolute;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-  }
-  
-  .number {
-    font-size: 18rem;
-    position: relative;
-  }
-  
+  .lines {box-shadow: inset 0 0 5em 1em #000; position: absolute; left: 0; width: 100vw; height: 100vh; left: 0;}
+  .number {font-size: 18rem; position: relative;}
   .number::after,
-  .number::before {
-    content: "";
-    border: #f7f7f7 solid 12px;
-    border-radius: 50%;
-    position: absolute;
-  }
-  
-  .number::before {
-    width: 480px;
-    height: 480px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .number::after {
-    width: 400px;
-    height: 400px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+  .number::before {content: ""; border: #f7f7f7 solid 12px; border-radius: 50%; position: absolute;}
+  .number::before {width: 480px; height: 480px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+  .number::after {width: 400px; height: 400px; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 
 
-
-
-
-
-
-
+/* 스크린 이펙트 필터 영역 */
 .background {
     background-image: url();
     background-position: 0;
@@ -530,7 +217,6 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
     height: 100%;
     width: 100%;
   }
-  
     .scratch--outer,
     .scratch--inner {
       height: inherit;
@@ -547,12 +233,10 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
       width: 120%;
     }
   }
-  
   .scratch--inner:after {
     animation: inner-scratch 2s infinite;
     left: 30%;
   }
-  
   .grain:after {
     animation: grain 0.5s steps(1) infinite;
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/341817/grain.jpg) repeat center center;
@@ -564,7 +248,6 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
     top: -5%;
     width: 110%;
   }
-  
   .title {
     animation: 3s fade;
     color: #bf9107;
@@ -575,7 +258,6 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
     text-align: center;
     top: 0;
     width: 100%;
-  
     span {
       display: inline-block;
       padding: .5em 1em;
@@ -601,152 +283,59 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
       }
     }
   }
-  
-  
-  /* Film Animations */
-  
   @keyframes grain {
-    0%,
-    100% {
-      transform: translate(0, 0, 0);
-    }
-    10% {
-      transform: translate(-1%, -1%);
-    }
-    20% {
-      transform: translate(1%, 1%);
-    }
-    30% {
-      transform: translate(-2%, -2%);
-    }
-    40% {
-      transform: translate(3%, 3%);
-    }
-    50% {
-      transform: translate(-3%, -3%);
-    }
-    60% {
-      transform: translate(4%, 4%);
-    }
-    70% {
-      transform: translate(-4%, -4%);
-    }
-    80% {
-      transform: translate(2%, 2%);
-    }
-    90% {
-      transform: translate(-3%, -3%);
-    }
+    0%, 100% {transform: translate(0, 0, 0);}
+    10% {transform: translate(-1%, -1%);}
+    20% {transform: translate(1%, 1%);}
+    30% {transform: translate(-2%, -2%);}
+    40% {transform: translate(3%, 3%);}
+    50% {transform: translate(-3%, -3%);}
+    60% {transform: translate(4%, 4%);}
+    70% {transform: translate(-4%, -4%);}
+    80% {transform: translate(2%, 2%);}
+    90% {transform: translate(-3%, -3%);}
   }
-  
   @keyframes scratch {
-    0%,
-    100% {
-      opacity: 0.075;
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(-1%);
-    }
-    20% {
-      transform: translateX(1%);
-    }
-    30% {
-      opacity: 0.09;
-      transform: translateX(-2%);
-    }
-    40% {
-      transform: translateX(3%);
-    }
-    50% {
-      opacity: 0.05;
-      transform: translateX(-3%);
-    }
-    60% {
-      transform: translateX(8%);
-    }
-    70% {
-      transform: translateX(-3%);
-    }
-    80% {
-      opacity: 0.02;
-      transform: translateX(10%);
-    }
-    90% {
-      transform: translateX(-2%);
-    }
+    0%, 100% {opacity: 0.075; transform: translateX(0);}
+    10% {transform: translateX(-1%);}
+    20% {transform: translateX(1%);}
+    30% {opacity: 0.09; transform: translateX(-2%);}
+    40% {transform: translateX(3%);}
+    50% {opacity: 0.05; transform: translateX(-3%);}
+    60% {transform: translateX(8%);}
+    70% {transform: translateX(-3%);}
+    80% {opacity: 0.02; transform: translateX(10%);}
+    90% {transform: translateX(-2%);}
   }
-  
-  // Long Scratches
   @keyframes inner-scratch {
-    0% {
-      opacity: 0.08;
-      transform: translateX(0);
-    }
-    10% {
-      transform: translateX(-1%);
-    }
-    20% {
-      transform: translateX(1%);
-    }
-    30% {
-      transform: translateX(-2%);
-    }
-    40% {
-      transform: translateX(3%);
-    }
-    50% {
-      opacity: 0.06;
-      transform: translateX(-3%);
-    }
-    60% {
-      transform: translateX(8%);
-    }
-    70% {
-      transform: translateX(-3%);
-    }
-    80% {
-      opacity: 0.03;
-      transform: translateX(10%);
-    }
-    90% {
-      transform: translateX(20%);
-    }
-    100% {
-      transform: translateX(30%);
-    }
+    0% {opacity: 0.08; transform: translateX(0);}
+    10% {transform: translateX(-1%);}
+    20% {transform: translateX(1%);}
+    30% {transform: translateX(-2%);}
+    40% {transform: translateX(3%);}
+    50% {opacity: 0.06; transform: translateX(-3%);}
+    60% {transform: translateX(8%);}
+    70% {transform: translateX(-3%);}
+    80% {opacity: 0.03; transform: translateX(10%);}
+    90% {transform: translateX(20%);}
+    100% {transform: translateX(30%);}
   }
-  
   @keyframes draw {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 110%;
-    }
+    0% {width: 0%;}
+    100% {width: 110%;}
   }
-  
   @keyframes draw-bottom {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 100%;
-    }
+    0% {width: 0%;}
+    100% {width: 100%;}
   }
-  
   @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+    0% {opacity: 0;}
+    100% {opacity: 1;}
   }
 
 
 
-
+/* 반응형 미디어쿼리(1280px) 영역 */
   @media (max-width: 1280px){
     header {width: 77.5625%;}
     header > .title2 {width: 76.5625%; height: 18.75%;}
@@ -768,10 +357,8 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
     .screen4 .info > li {margin: 4% 0;}
     .screen4 .movie-screen .cont-text > li {font-size: 1.5rem; margin: 1%;}
     .screen4 .subtitle > ul {font-size: 1.5rem;}
-
-
+    
+    .screen-cont p {font-size: 1.2rem;}
   }
 
-
-  
 

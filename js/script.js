@@ -1,3 +1,4 @@
+// 필름 슬라이드
 $(document).ready(function(){
     $(".film-slide").hover(function(){
         	$("ul, .movie").css("animation-play-state","paused");
@@ -8,10 +9,12 @@ $(document).ready(function(){
 
 
 
+// 패럴랙스 스크롤링
 var s = skrollr.init();
 
 
 
+// 스크린 카운트다운
 const number = document.querySelector(".number");
 const countdown = 5;
 let counter = countdown;
@@ -27,6 +30,7 @@ setInterval(() => {
 
 
 
+// 필름 이미지 클릭시 스크린 이미지 모달창
 $('.screen-cont > div').css('display', 'none');
 $('.screen-cont > div').eq(0).css('display', 'block');
 

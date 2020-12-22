@@ -174,9 +174,10 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 .screen4 .right-cont > ul > li > ul > li > .fa-star {color: yellow; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
 .screen4 .cont {width: 100%; height: 100%; position: absolute; background: #111; transition: 1s;}
 .screen4 .cont > div {position: absolute;}
-.screen4 .movie-screen {width: 100%; height: 100vh}
-.screen4 .movie-screen .cont-text {position: absolute;}
-.screen4 .movie-screen .cont-text > li {font-size: 2rem; margin: 1.5%; color: #fff;}
+.screen4 .movie-screen {width: 100%; height: 100vh;}
+.screen4 .movie-screen video {position: absolute;}
+.screen4 .movie-screen > ul {position: absolute;}
+.screen4 .movie-screen .cont-text > li {font-size: 2rem; margin: 1.5%; color: #fff; position: absolute;}
 .screen4 .subtitle {width: 100%; height: 20%; bottom: 10%;}
 .screen4 .subtitle > ul {position: absolute; color: #fff; text-align: center; font-size: 2rem; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
 .screen-cont .cont-txt {margin: 1%; padding: 1% 1% 0 1%; position: absolute; background: #fff; right: 0; bottom:0; z-index: 15000; font-size: 1.2rem; border: 3px solid #111; border-radius: 20px;}

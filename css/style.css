@@ -119,8 +119,8 @@ body {margin: 0; padding: 0; height: 50000px;}
 
 /* 영화관 배경 이미지 영역 */
 header {width: 1620px; height: 100vh; overflow: hidden; position: fixed;}
-header .bg {width: 100%; height: 100vh; float: left; position: fixed; overflow: hidden;}
-header .bg img {width: 84.375%; height: 100vh;}
+header .bg {width: 1620px; height: 100%; float: left; position: fixed; overflow: hidden;}
+header .bg img {width: 100%; height: 100vh;}
 header .bg .bgi1 {display: none;}
 
 
@@ -154,6 +154,7 @@ header .bg .bgi1 {display: none;}
 header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margin: 0 auto; position: relative; top: 50%; transform: translateY(-50%); overflow: hidden;}
 .screen0 {width: 100%; height: 100%; position: absolute; transition: 1s;}
 .screen0 > div, ul {width: 100%; height: 100%;}
+.screen0 > img {width: 100%; height: 100vh;}
 .screen2 img {position: absolute; transition: 1s;}
 .screen2 img:nth-child(2) {z-index: -1;}
 .screen3 p {width: 100%; font-size: 5rem; color: #fff; text-align: center; position: absolute; top: 50%; transform: translateY(-50%); transition: 1s;}

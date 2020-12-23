@@ -11,7 +11,7 @@ body {margin: 0; padding: 0; height: 50000px;}
 
 
 /* 마우스 스크롤 안내 아이콘 영역 */
-.mouse {width: 5%; height: 100vh; position: fixed; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; top: 70%; left: 50%; transform: translateX(-50%); height: 20%; transition: 1s;}
+.mouse {width: 1%; height: 100vh; position: fixed; z-index: 10000; display: flex; flex-direction: column; align-items: center; justify-content: center; top: 70%; left: 50%; transform: translateX(-50%); height: 20%; transition: 1s;}
 .mouse p {font-size: 1.2rem; font-weight: bold; background: #111; line-height: 2; border: 3px solid #fff; border-radius: 20px; margin-top: 20px; font-family: sans-serif; letter-spacing: 12px; text-indent: 12px; color: #fff; animation: colorText 5s ease-out infinite, nudgeText 5s ease-out infinite;}
 .mouse2 {display: none;}
 .mouse .scroll {background: #4e5559 linear-gradient(transparent 0%, transparent 50%, #fff 50%, #fff 100%); position: relative; width: 52px; height: 88px; border-radius: 100px; background-size: 100% 200%; animation: colorSlide 5s linear infinite, nudgeMouse 5s ease-out infinite;}
@@ -118,8 +118,8 @@ body {margin: 0; padding: 0; height: 50000px;}
 
 
 /* 영화관 배경 이미지 영역 */
-header {width: 1620px; height: 100vh; overflow: hidden; position: fixed;}
-header .bg {width: 1620px; height: 100%; float: left; position: fixed; overflow: hidden;}
+header {width: 84.375%; height: 100vh; overflow: hidden; position: fixed;}
+header .bg {width: 100%; height: 100%; float: left; position: fixed; overflow: hidden;}
 header .bg img {width: 100%; height: 100vh;}
 header .bg .bgi1 {display: none;}
 

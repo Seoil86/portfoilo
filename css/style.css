@@ -80,7 +80,7 @@ body {margin: 0; padding: 0; height: 50000px;}
 
 
 /* 필름 이미지 슬라이드 영역 */
-.film {width: 300px; height: 100vh; overflow: hidden; position: fixed; right: 0;}
+.film {width: 300px; height: 100vh; overflow: hidden; position: fixed; right: 0; z-index: 10000;}
 .film ul {width: 100%; animation: slide 15s linear infinite;}
 .film ul li {width: 100%;}
 @keyframes slide {
@@ -187,7 +187,7 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 .screen-cont .cont-txt {margin: 1%; padding: 1% 1% 0 1%; position: absolute; background: #fff; right: 0; bottom:0; z-index: 15000; font-size: 1.2rem; border: 3px solid #111; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li {margin: 2% 0;}
 .screen-cont .cont-txt > ul > li:nth-child(3) {text-align: center;}
-.screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 3rem; padding: 2.5%; border-radius: 20px;}
+.screen-cont .cont-txt > ul > li > a {background: #111; color: #fff; line-height: 2.5rem; padding: 2.5%; border-radius: 20px;}
 .screen-cont .cont-txt > ul > li > a:hover {background: red; color: #fff;}
 .screen-cont p {position: absolute; width: 100%; text-align: center; font-size: 1.5rem; padding: 1%; background: #111; color: #fff;}
 .screen6 {background: #111;}
@@ -345,8 +345,6 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 
 /* 반응형 미디어쿼리(1280px) 영역 */
   @media (max-width: 1280px){
-    
-
     .player {width: 40vw; height: 40vh; left: -3%; bottom: 3%;}
 
     .mouse {top: 68%;}
@@ -361,6 +359,8 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
     .screen4 .subtitle > ul {font-size: 1.5rem;}
     
     .screen-cont p {font-size: 1.2rem;}
+
+    .screen-cont .cont-txt {font-size: 1rem;}
   }
 
 

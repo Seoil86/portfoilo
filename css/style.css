@@ -119,7 +119,7 @@ body {margin: 0; padding: 0; height: 50000px;}
 
 /* 영화관 배경 이미지 영역 */
 header {width: 84.375%; height: 100vh; overflow: hidden; position: fixed;}
-header .bg {width: 100%; height: 100%; float: left; position: fixed; overflow: hidden;}
+header .bg {width: 84.375%; height: 100%; float: left; position: fixed; overflow: hidden;}
 header .bg img {width: 100%; height: 100vh;}
 header .bg .bgi1 {display: none;}
 
@@ -137,7 +137,7 @@ header .bg .bgi1 {display: none;}
  /* 서브 타이틀 영역 */
  header > .title2 {width: 85.2%; height: 15.47987616099071%; float: left; position: fixed; transition: 1s;}
  header > .title2 > ul {float: left; width: 100%; height: 100%; text-align: center; background: #111;}
- header > .title2 > ul > li {display: inline; position: relative;}
+ header > .title2 > ul > li {width: 100%; height: 100%; display: inline; position: relative;}
  header > .title2 > ul > li img {position: relative; top: 50%; transform: translateY(-50%);}
  header > .title2 > ul > li:nth-child(3) {margin-right: 5%;}
  header .bg {z-index: -1;}
@@ -176,7 +176,7 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 .screen4 .right-cont > ul > li > ul > li > .fa-star {color: yellow; text-shadow: -1px 0 #111, 0 1px#111, 1px 0 #111, 0 -1px #111;}
 .screen4 .cont {width: 100%; height: 100%; position: absolute; background: #111; transition: 1s;}
 .screen4 .cont > div {position: absolute;}
-.screen4 .movie-screen {width: 100%; height: 100vh;}
+.screen4 .movie-screen {width: 100%; height: 100%;}
 .screen4 .movie-screen video {position: absolute;}
 .screen4 .movie-screen > ul {position: absolute;}
 .screen4 .movie-screen .cont-text > li {font-size: 2rem; margin: 1.5%; color: #fff; position: absolute;}
@@ -345,13 +345,7 @@ header .container {width: 59.25925925925926%; height: 55.72755417956656vh; margi
 
 /* 반응형 미디어쿼리(1280px) 영역 */
   @media (max-width: 1280px){
-    header {width: 77.5625%;}
-    header > .title2 {width: 76.5625%; height: 18.75%;}
-    header > .title2 > ul > li img {height: 50%;}
-    header .bg {width: 76.5625%; height: 100vh;}
-    header .bg .bgi {display: none;}
-    header .bg .bgi1 {display: block; position: relative;}
-    header .container {width: 65.30612244897959%; height: 45%;}
+    
 
     .player {width: 40vw; height: 40vh; left: -3%; bottom: 3%;}
 
